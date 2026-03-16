@@ -1,0 +1,38 @@
+<section>
+  <h2>{{ .heading }}</h2>
+  {{ with .body }}<p>{{ . }}</p>{{ end }}
+  {{ partial "resume/bullet-list.html" .points }}
+  {{ range .subsections }}
+    <div>
+      {{ if .heading.startdate }}
+        <div class="heading-line">
+          <h3>
+            {{ if .heading.url }}<a href="{{ .heading.url }}">{{ .heading.label }}</a>{{ else }}{{ .heading.label }}{{ end }}
+          </h3>
+          <h3>
+            {{ .heading.startdate }} -
+            {{ if .heading.enddate }}{{ .heading.enddate }}{{ else }}Current{{ end }}
+          </h3>
+        </div>
+        {{ range .degrees }}
+          <p>
+            <em>{{ . }}</em>
+          </p>
+        {{ end }}
+        {{ partial "resume/bullet-list.html" .points }}
+      {{ else }}
+        {{ $subsection := . }}
+        {{ with .points }}
+          {{ if ne (printf "%T" (index . 0)) "string" }}
+            {{ partial "resume/group-header.html" $subsection }}
+          {{ else }}
+            {{ partial "resume/heading-label.html" $subsection.heading }}
+            {{ partial "resume/bullet-list.html" . }}
+          {{ end }}
+        {{ else }}
+          {{ partial "resume/heading-label.html" $subsection.heading }}
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+</section>

@@ -1,0 +1,19 @@
+<div class="group-header">
+  <h3>
+    {{ if .heading.url }}<a href="{{ .heading.url }}">{{ .heading.label }}</a>{{ else }}{{ .heading.label }}{{ end }}
+  </h3>
+  {{ range .points }}
+    <div>
+      {{ with .heading }}
+        <div class="heading-line">
+          <h4>{{ .label }}</h4>
+          <h4>
+            {{ .startdate }} -
+            {{ if .enddate }}{{ .enddate }}{{ else }}Current{{ end }}
+          </h4>
+        </div>
+      {{ end }}
+      {{ partial "resume/bullet-list.html" .points }}
+    </div>
+  {{ end }}
+</div>
