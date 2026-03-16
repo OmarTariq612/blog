@@ -1,0 +1,65 @@
+name: Omar Tariq Abd-ElRaziq
+email: omar.tariq312@gmail.com
+phone: ''
+website: omartariq.me
+github: OmarTariq612
+
+sections:
+  - heading: Summary
+    body: Backend Engineer with 1.5 years of experience with maintaining highly scalable concurrent services, focused on the observability domain.
+
+  - heading: Skills
+    points:
+      - Golang - Ruby and Rails - Argo workflow - ClickHouse - MySQL - Python - kubernetes - Docker - AWS - Kafka - Sidekiq
+
+  - heading: Experiences
+    subsections:
+      - heading:
+          label: Luciq (formerly known as Instabug) - Giza, Egypt
+        points:
+          - heading:
+              label: Backend Engineer II
+              startdate: Oct 2025
+              enddate: Present
+            points:
+              - 'Worked on:'
+              - - implementing cost attribution for APM-owned services.
+                - utilizing prometheus and grafana to expose latency and error rates regarding the different services used in the ingestion flow.
+          - heading:
+              label: Backend Engineer I
+              startdate: Sept 2024
+              enddate: Oct 2025
+            points:
+              - Achieved up to 90% reduction in memory footprint for ingestion pipeline workers.
+              - Owned the migration process from Java for E2E testing to use Robot framework.
+              - Achieved 1000$ monthly saving in AWS Aurora bill.
+              - Collaborated with customer success team to enhance users' experience.
+              - 'Worked on:'
+              - - improving URL clustering by implementing trie-based data structure.
+                - implemneting new product requirements and delivered on time using agile methodology.
+          - heading:
+              label: Backend Intern
+              startdate: July 2024
+              enddate: Aug 2024
+            points:
+              - Implemented thread pooling in a Rails service to optimize 3 endpoints, leading to 2.5x speedup.
+
+  - heading: Education
+    subsections:
+      - heading:
+          label: Faculty of Engineering - Minia University
+          startdate: Sept 2019
+          enddate: May 2024
+        degrees:
+          - B.S. in Computer Engineering
+        points:
+          - "GPA: 3.75 / 4"
+
+  - heading: Open source contrib
+    subsections:
+      - heading:
+          label: goech
+          url: https://github.com/OmarTariq612/goech
+        points:
+          - A simple library that can be used to serialize / deserialize config / key ech structures according to [RFC 9849](https://datatracker.ietf.org/doc/rfc9849/).
+          - It is being used by [caddyserver](https://github.com/caddyserver/caddy/blob/1fbb28720b5d20d54074593b3c5d12f3549f371b/modules/caddytls/ech.go#L943) with minor modifications.
